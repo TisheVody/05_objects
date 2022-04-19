@@ -15,7 +15,7 @@ class WallServiceTest {
         )
 
         // assert
-        assertTrue(WallService.add(testPost1).id = 0)
+        assertTrue(WallService.add(testPost1).id != 0)
     }
 
     @Test
