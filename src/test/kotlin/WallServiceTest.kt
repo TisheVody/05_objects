@@ -7,11 +7,30 @@ class WallServiceTest {
     @Test
     fun add() {
         // arrange
-        val testPost1 = Post(
-            id = 0,
+        val testPost1 = Post(id = 0,
             0,
             0,
-            "Тестим"
+            0,
+            0,
+            "Тестим",
+            0,
+            0,
+            false,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "string",
+            0,
+            false,
+            false,
+            false,
+            0,
+            false,
+            false,
+            0,
+            0
         )
 
         // assert
@@ -22,10 +41,30 @@ class WallServiceTest {
     fun update_true() {
         // arrange
         val testPost1 = Post(
+            id = 0,
             0,
             0,
             0,
-            "Тестим"
+            0,
+            "Тестим",
+            0,
+            0,
+            false,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "string",
+            0,
+            false,
+            false,
+            false,
+            0,
+            false,
+            false,
+            0,
+            0
         )
         WallService.add(testPost1)
 
@@ -33,14 +72,34 @@ class WallServiceTest {
             id = 1,
             0,
             0,
-            "updated"
+            0,
+            0,
+            "updated",
+            0,
+            0,
+            false,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "string",
+            0,
+            false,
+            false,
+            false,
+            0,
+            false,
+            false,
+            0,
+            0
         )
 
         // act
         val actualResultUpd = WallService.update(testPost2)
 
         // assert
-        assertEquals(true, actualResultUpd)
+        assertTrue(actualResultUpd)
     }
 
     @Test
@@ -50,21 +109,61 @@ class WallServiceTest {
             id = 12345,
             0,
             0,
-            "Тестим"
+            0,
+            0,
+            "Тестим",
+            0,
+            0,
+            false,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "string",
+            0,
+            false,
+            false,
+            false,
+            0,
+            false,
+            false,
+            0,
+            0
         )
         WallService.add(testPost1)
 
         val testPost2 = Post(
-            id = 1234,
+            id = 1,
             0,
             0,
-            "updated"
+            0,
+            0,
+            "updated",
+            0,
+            0,
+            false,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "string",
+            0,
+            false,
+            false,
+            false,
+            0,
+            false,
+            false,
+            0,
+            0
         )
 
         // act
         val actualResultUpd = WallService.update(testPost2)
 
         // assert
-        assertEquals(false, actualResultUpd)
+        assertFalse(actualResultUpd)
     }
 }
